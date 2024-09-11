@@ -1,6 +1,6 @@
 <h2>Template</h2>
 <h3>Text Interpolation</h3>
-<p>{{ name }} - {{ age }} {{ sum(1,2)}}</p>
+<p>{{ name }} - {{ age }}</p>
 
 <p>{{ 1 > age }}</p>
 
@@ -22,11 +22,27 @@
 
 <h2>Class and Style binding</h2>
 <!-- Utilizado para manipular classes e estilos no CSS -->
- <p [class.background-red]="age >=32" [class.background-blue]="age < 32">{{ name }}</p>
+ <p [class.background-red]="age > 32" [class.background-blue]="age < 32">{{ name }}</p>
 
  <p [style.text-decoration]="isTextDecoration">{{age}}</p>
 
  <hr/>
 
- <!-- <element -->
+  <h2>Event biding</h2>
+
+ <!--
+    <element
+        (TargetEventName)= 'TemplateStatemen
+    ></element>
+    -->
+
+    <button (click)="sum()">+</button>
+    <button (click)="sub()">-</button>
+    <input (keydown.shift.t)="onKeyDown($event)"/>
+
+    <div style="background: red; width: 300px; height: 300px; margin-top: 10px;"
+    (mousemove)="onMouseMove($event)"
+    ></div>
+
+
 
