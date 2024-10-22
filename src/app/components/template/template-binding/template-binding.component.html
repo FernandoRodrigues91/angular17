@@ -56,7 +56,12 @@
     <h3>Diretivas de atributro</h3>
     <div [ngClass]="{'background-red': age > 35, 'background-blue': age < 35 }">Classes condicionais.</div>
 
-    <div>Estilo dinâmico.</div>
+    <div
+      [ngStyle]="{
+        color: age > 35 ? 'green' : 'red',
+        'font-size': age > 35 ? '10px' : '20px',
+
+    }">Estilo dinâmico.</div>
 
 
 
