@@ -2,7 +2,52 @@
 
 <h3>IF, FOR</h3>
 
-<!-- Nova forma -->
+<!-- Nova forma For e seus Valores -->
+@for (
+    item of itens; track item.name;
+    let i = $index;
+    let c = $count;
+    let f = $first;
+    let l = $last;
+    let e = $even;
+    let o = $odd;
+) {
+    <p>{{ item.name }}</p>
+    <p>index - {{ i }}</p>
+    <p>count - {{ c }}</p>
+    <p>first - {{ f }}</p>
+    <p>last - {{ l }}</p>
+    <p>even - {{ e }}</p>
+    <p>odd - {{ o }}</p>
+}
+
+<hr>
+<!-- Forma Antiga  For e seus Valores -->
+ <ng-container 
+    *ngFor=" 
+        let item of itens;
+        let i = index;
+        let c = count;
+        let f = first;
+        let l = last;
+        let e = even;
+        let o = odd;
+        trackBy: trackByFn
+    "
+>
+    <p>{{ item.name }}</p>
+    <p>index - {{ i }}</p>
+    <p>count - {{ c }}</p>
+    <p>first - {{ f }}</p>
+    <p>last - {{ l }}</p>
+    <p>even - {{ e }}</p>
+    <p>odd - {{ o }}</p>
+</ng-container>
+
+<input #name type="text">
+<button (click)="addNewName(name.value)">Add Name</button>
+ 
+
 <!-- IF assicrono com FOR-->
 @if ( loadingData$ | async; as data) {
    <ul>
@@ -15,7 +60,6 @@
 
     <p>Carregando...</p>
 }
-<p>teste</p>
 <!--  somente o FOR -->
 
 <!-- @for (item of loadingData$ | async; track item) {
