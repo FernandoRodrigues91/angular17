@@ -78,5 +78,33 @@
 </ng-container>
 <ng-template #loading> <p>Carregando...</p></ng-template>
 
+<!-- Nova Forma  @FOR - @empty-->
+
+<ul>
+    @for (item of itens; track item.name) {
+        <li>{{item.name}}</li>
+    } @empty {
+        <li> Não contem valores</li>
+    }
+</ul>
+
+<h3>SWITCH CASE</h3>
+
+<!-- Nova Forma -->
+ @switch (switchCondition) {
+    @case ('A'){
+        <p>Sim sua letra é : A</p>
+    }
+
+    @case ('B') {
+        <p>Sim sua letra é : B</p>
+    }
+
+    @default {
+        <p>Os dados nao foram encontrados</p>
+    }
+ }
+
+
 
 
