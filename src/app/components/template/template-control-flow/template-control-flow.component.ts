@@ -5,7 +5,7 @@ import { delay, Observable, of } from 'rxjs';
 @Component({
   selector: 'app-template-control-flow',
   standalone: true,
-  imports: [CommonModule, AsyncPipe, NgFor, NgSwitch, NgIf ],
+  imports: [CommonModule, AsyncPipe, NgFor, NgIf],
   templateUrl: './template-control-flow.component.html',
   styleUrl: './template-control-flow.component.scss'
 })

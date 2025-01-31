@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './template-deferrable-views.component.scss'
 })
 export class TemplateDeferrableViewsComponent {
-
+public isTrue = true;
 }
